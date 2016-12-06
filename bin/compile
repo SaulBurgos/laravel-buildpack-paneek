@@ -439,12 +439,12 @@ EOF
 
 set -o nounset
 
-if [ -z "$DEPLOY_ARTISAN_TASKS" ]; then
-  echo "DEPLOY_ARTISAN_TASKS has not been set"
-  echo "You can set it with:"
-  echo 'heroku config:set DEPLOY_ARTISAN_TASKS="tasks to run"'
-  exit 0
-fi
+# if [ -z "$DEPLOY_ARTISAN_TASKS" ]; then
+  #echo "DEPLOY_ARTISAN_TASKS has not been set"
+  #echo "You can set it with:"
+  #echo 'heroku config:set DEPLOY_ARTISAN_TASKS="tasks to run"'
+  #exit 0
+# fi
 
 # run artisan commands
-cd $build_dir && php artisan $DEPLOY_ARTISAN_TASKS
+# cd $build_dir && php artisan $DEPLOY_ARTISAN_TASKS
